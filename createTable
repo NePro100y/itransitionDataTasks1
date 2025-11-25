@@ -1,0 +1,10 @@
+CREATE TABLE books (
+    id TEXT PRIMARY KEY,
+    title TEXT,
+	author TEXT,
+	genre TEXT,
+	publisher TEXT,
+    year INTEGER,
+    price_value NUMERIC(10, 2),
+    price_currency TEXT
+);
