@@ -1,0 +1,9 @@
+CREATE TABLE summary AS
+SELECT
+    year AS publication_year,
+    COUNT(*) AS book_count,
+    ROUND(AVG(CASE WHEN price_currency = '€' THEN price_value * 1.2
+				WHEN price_currency = '$' THEN price_value END), 2) AS average_price
+FROM books b
+GROUP BY year
+ORDER BY year;
